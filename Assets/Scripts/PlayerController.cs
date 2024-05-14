@@ -7,6 +7,8 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private AudioClip sideAudio, dieAudio;
 
+   // [SerializeField] private GameManager gameManager;
+
      private AudioSource audio;
      private SpriteRenderer spr;
 
@@ -33,6 +35,20 @@ public class PlayerController : MonoBehaviour
             }
             audio.PlayOneShot(sideAudio);
             transform.position = new Vector2(-transform.position.x, transform.position.y);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if( collision.gameObject.tag == Constants.OBSTACLE_TAG)
+        {
+            Debug.Log("end game");
+        }
+        else if (collision.gameObject.tag == Constants.COIN_TAG)
+        {
+            Debug.Log("coin");
+            Destroy(collision.gameObject);
+            GameManager.Instance.UpdateCoin();
         }
     }
 }

@@ -173,7 +173,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Buttons_3
+      name: Home
       rect:
         serializedVersion: 2
         x: 284
@@ -728,13 +728,13 @@ TextureImporter:
       Buttons_24: -1654855721
       Buttons_25: -1327670176
       Buttons_27: -823478971
-      Buttons_3: -1519885736
       Buttons_4: 298113456
       Buttons_5: 701341708
       Buttons_6: -239895792
       Buttons_7: -230725024
       Buttons_8: 528875415
       Buttons_9: -1135662522
+      Home: -1519885736
       Playmenu: -685409807
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

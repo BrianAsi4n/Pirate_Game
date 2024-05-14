@@ -1091,7 +1091,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Icons_17
+      name: Coin0
       rect:
         serializedVersion: 2
         x: 868
@@ -1143,6 +1143,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Coin0: -231943630
       Icons_0: 21300000
       Icons_1: 21300002
       Icons_10: 21300020
@@ -1152,7 +1153,6 @@ TextureImporter:
       Icons_14: 21300028
       Icons_15: 21300030
       Icons_16: 21300032
-      Icons_17: -231943630
       Icons_18: 21300036
       Icons_19: 21300038
       Icons_2: 21300004
