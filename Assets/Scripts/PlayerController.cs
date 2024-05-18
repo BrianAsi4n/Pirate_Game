@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
     {
         if( collision.gameObject.tag == Constants.OBSTACLE_TAG)
         {
-            Debug.Log("end game");
+            GameManager.Instance.EndGame();
         }
         else if (collision.gameObject.tag == Constants.COIN_TAG)
         {

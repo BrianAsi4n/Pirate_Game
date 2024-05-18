@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     [SerializeField] private GameObject menuPanel;
     [SerializeField] private GameObject inGamePanel;
+    [SerializeField] private GameObject endGamePanel;
     [SerializeField] private Rigidbody2D shipBody;
 
     public bool isStart;
@@ -15,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     private int coin;
     [SerializeField] private TMP_Text coinText;
+
+
 
     private void Start()
     {
@@ -37,10 +41,22 @@ public class GameManager : MonoBehaviour
         shipBody.gravityScale = 1;
         isStart = true;
     }
+
+    public void EndGame()
+    {
+        endGamePanel.SetActive(true);
+    }
+
+    public void ResetGame()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
     public void UpdateCoin() 
     {
         coin++;
         coinText.text = coin.ToString();
         Debug.Log(coin);
+        
     }
 }
