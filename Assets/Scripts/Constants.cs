@@ -5,7 +5,7 @@ using UnityEngine;
 public static class Constants 
 {
     public static float SHIP_MIN_SPEED = 3.5f;
-    public static float SHIP_MAX_SPEED = 6f;
+    public static float SHIP_MAX_SPEED = 6.0f;
 
     public static string OBSTACLE_TAG = "Obstacle";
     public static string COIN_TAG = "Coin";

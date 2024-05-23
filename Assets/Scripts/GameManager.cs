@@ -20,14 +20,13 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TMP_Text coinText;
 
 
-
     private void Start()
     {
         if (Instance == null)
         Instance = this;
 
-        coin = PlayerPrefs.GetInt(Constants.COIN);
-        coinText.text = coin.ToString();
+        //coin = PlayerPrefs.GetInt(Constants.COIN);
+        //coinText.text = coin.ToString();
     }
 
     private void Update()
@@ -65,6 +64,5 @@ public class GameManager : MonoBehaviour
         coin++;
         coinText.text = coin.ToString();
         Debug.Log(coin);
-        
     }
 }

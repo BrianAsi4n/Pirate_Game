@@ -17,7 +17,7 @@ public class MastSpaw : MonoBehaviour
     void Update()
     {
         if (Vector2.Distance(new Vector2(0, player.position.y),
-            new Vector2(0, lastMast.transform.position.y)) < 6f)
+            new Vector2(0, lastMast.transform.position.y)) < 9.56f)
         {
           GameObject spawnMast =  Instantiate(mastPrefab,
               new Vector2(0f, lastMast.GetChild(0).position.y),

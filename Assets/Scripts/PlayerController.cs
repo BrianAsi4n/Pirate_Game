@@ -52,5 +52,6 @@ public class PlayerController : MonoBehaviour
             GameManager.Instance.UpdateCoin();
             audio.PlayOneShot(coinAudio);
         }
+        
     }
 }
