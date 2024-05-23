@@ -5,7 +5,7 @@ using UnityEngine.EventSystems;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private AudioClip sideAudio, dieAudio;
+    [SerializeField] private AudioClip sideAudio, dieAudio, coinAudio;
 
    // [SerializeField] private GameManager gameManager;
 
@@ -43,12 +43,14 @@ public class PlayerController : MonoBehaviour
         if( collision.gameObject.tag == Constants.OBSTACLE_TAG)
         {
             GameManager.Instance.EndGame();
+            audio.PlayOneShot(dieAudio);
         }
         else if (collision.gameObject.tag == Constants.COIN_TAG)
         {
             Debug.Log("coin");
             Destroy(collision.gameObject);
             GameManager.Instance.UpdateCoin();
+            audio.PlayOneShot(coinAudio);
         }
     }
 }

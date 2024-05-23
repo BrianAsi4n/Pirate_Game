@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Timeline;
 
 public class GameManager : MonoBehaviour
 {
@@ -24,6 +25,9 @@ public class GameManager : MonoBehaviour
     {
         if (Instance == null)
         Instance = this;
+
+        coin = PlayerPrefs.GetInt(Constants.COIN);
+        coinText.text = coin.ToString();
     }
 
     private void Update()
@@ -36,6 +40,7 @@ public class GameManager : MonoBehaviour
     }
     public void PlayButton()
     {
+        Time.timeScale = 1;
         menuPanel.SetActive(false);
         inGamePanel.SetActive(true);
         shipBody.gravityScale = 1;
@@ -44,7 +49,10 @@ public class GameManager : MonoBehaviour
 
     public void EndGame()
     {
+        PlayerPrefs.SetInt(Constants.COIN, coin);
         endGamePanel.SetActive(true);
+        isStart = false;
+        Time.timeScale = 0;
     }
 
     public void ResetGame()
