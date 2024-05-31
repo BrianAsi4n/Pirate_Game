@@ -635,7 +635,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52892e383ba099f4b86908f693a66f38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mastPrefab: {fileID: 3052530735570545886, guid: c84e9b3aed55f6d47861634edd409248, type: 3}
+  mastPrefabs:
+  - {fileID: 3052530735570545886, guid: c84e9b3aed55f6d47861634edd409248, type: 3}
+  - {fileID: 3052530735570545886, guid: 6c4d947ea87f5924293562b126082b61, type: 3}
+  - {fileID: 3052530735570545886, guid: 10ca01403af9af5419c358ac5e1b91dc, type: 3}
+  - {fileID: 3052530735570545886, guid: 885210b19dea6714d987c07daeff259b, type: 3}
   container: {fileID: 10366983}
   player: {fileID: 101615678}
   lastMast: {fileID: 687052404}
