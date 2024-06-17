@@ -639,7 +639,6 @@ MonoBehaviour:
   - {fileID: 3052530735570545886, guid: c84e9b3aed55f6d47861634edd409248, type: 3}
   - {fileID: 3052530735570545886, guid: 6c4d947ea87f5924293562b126082b61, type: 3}
   - {fileID: 3052530735570545886, guid: 10ca01403af9af5419c358ac5e1b91dc, type: 3}
-  - {fileID: 3052530735570545886, guid: 885210b19dea6714d987c07daeff259b, type: 3}
   container: {fileID: 10366983}
   player: {fileID: 101615678}
   lastMast: {fileID: 687052404}

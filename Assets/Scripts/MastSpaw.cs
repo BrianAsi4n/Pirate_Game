@@ -36,6 +36,7 @@ public class MastSpaw : MonoBehaviour
                     GameObject lastPack = lastMast.GetChild(2).GetChild(WhiCoin).gameObject;
                     lastPack.SetActive(false);
 
+
                 }
             }
         }
