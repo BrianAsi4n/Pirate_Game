@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -7,10 +7,12 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private AudioClip sideAudio, dieAudio, coinAudio;
 
-   // [SerializeField] private GameManager gameManager;
-
-     private AudioSource audio;
+    // [SerializeField] private GameManager gameManager;
+    public Transform lastMast;
+    private AudioSource audio;
      private SpriteRenderer spr;
+
+    private float initialY;
 
 
     // Start is called before the first frame update
@@ -18,6 +20,7 @@ public class PlayerController : MonoBehaviour
     {
         spr = GetComponent<SpriteRenderer>();
         audio = GetComponent<AudioSource>();
+        initialY = lastMast.position.y;
     }
 
     // Update is called once per frame
@@ -51,6 +54,12 @@ public class PlayerController : MonoBehaviour
             Destroy(collision.gameObject);
             GameManager.Instance.UpdateCoin();
             audio.PlayOneShot(coinAudio);
+        }
+        else if (collision.gameObject.tag == Constants.LEIGHT_TAG)
+        {
+            float heightDifference = lastMast.position.y - initialY;
+            Debug.Log("Height Difference: " + heightDifference);
+            GameManager.Instance.UpdateLeight();
         }
         
     }

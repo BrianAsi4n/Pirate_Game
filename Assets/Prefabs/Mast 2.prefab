@@ -372,7 +372,7 @@ GameObject:
   - component: {fileID: 3775103644830602381}
   m_Layer: 0
   m_Name: Mast 2
-  m_TagString: Untagged
+  m_TagString: leight
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -17,7 +17,9 @@ public class GameManager : MonoBehaviour
     private float shipFallSpeed;
 
     private int coin;
+    private float leight;
     [SerializeField] private TMP_Text coinText;
+    [SerializeField] private TMP_Text lengthText;
 
 
     private void Start()
@@ -27,6 +29,7 @@ public class GameManager : MonoBehaviour
 
         //coin = PlayerPrefs.GetInt(Constants.COIN);
         //coinText.text = coin.ToString();
+        
     }
 
     private void Update()
@@ -64,5 +67,11 @@ public class GameManager : MonoBehaviour
         coin++;
         coinText.text = coin.ToString();
         Debug.Log(coin);
+    }
+    public void UpdateLeight()
+    {
+        leight++;
+        lengthText.text = leight.ToString();
+        Debug.Log(leight);
     }
 }

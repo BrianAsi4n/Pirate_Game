@@ -9,6 +9,7 @@ public static class Constants
 
     public static string OBSTACLE_TAG = "Obstacle";
     public static string COIN_TAG = "Coin";
+    public static string LEIGHT_TAG = "leight";
 
     public static string COIN = "Coin Game";
 }
